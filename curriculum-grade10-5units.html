@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grade 10 Topics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: reference page on graph-paper ground (same look as the grade 11 site); one chapter card per subject area, each with numbered teaching units */
+:root{
+  --bg:#f3f5f7; --paper:#ffffff; --ink:#1c2633; --muted:#5b6878; --line:#d9dfe6;
+  --accent:#1f6f8b; --accent-soft:#e3f0f5; --mark:#b4561e; --mark-soft:#fbeee5; --grid:rgba(31,111,139,.06);
+  --f-display:"Frank Ruhl Libre", Georgia, serif;
+  --f-body:"Assistant", Arial, sans-serif;
+  --f-math:"JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12171d; --paper:#1a2129; --ink:#e4e9ef; --muted:#9aa7b6; --line:#2c3642;
+  --accent:#6cbcd6; --accent-soft:#1b313b; --mark:#f0a46f; --mark-soft:#3a2a1f; --grid:rgba(108,188,214,.05); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12171d; --paper:#1a2129; --ink:#e4e9ef; --muted:#9aa7b6; --line:#2c3642;
+  --accent:#6cbcd6; --accent-soft:#1b313b; --mark:#f0a46f; --mark-soft:#3a2a1f; --grid:rgba(108,188,214,.05); color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.7;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px}
+.wrap{max-width:860px;margin:0 auto;padding-inline:16px;padding-block:32px 64px;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.25;margin:0}
+h1{font-size:2.4rem}
+h2{font-size:1.75rem;color:var(--accent)}
+h3{font-size:1.2rem}
+p{margin:0}
+.lead{color:var(--muted);max-width:65ch}
+header{display:flex;flex-direction:column;gap:10px}
+.eyebrow{font-size:.8rem;letter-spacing:.08em;color:var(--muted);font-weight:700;text-transform:uppercase}
+.back{color:var(--accent);font-weight:600;text-decoration:none;font-size:.95rem;width:fit-content}
+.back:hover,.back:focus-visible{text-decoration:underline}
+nav{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px 20px}
+nav ol{margin:6px 0 0;padding-inline-start:22px;columns:2;column-gap:32px}
+nav a{color:var(--accent);text-decoration:none;font-weight:600}
+nav a:hover,nav a:focus-visible{text-decoration:underline}
+@media (max-width:560px){nav ol{columns:1}}
+.tablebox{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.95rem}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top}
+th{background:var(--accent-soft);font-weight:700}
+td:first-child{font-family:var(--f-math);color:var(--accent);font-weight:600;width:3rem}
+tr:last-child td{border-bottom:0}
+section.ch{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px 24px 28px;display:flex;flex-direction:column;gap:16px;scroll-margin-top:16px}
+.num{font-family:var(--f-math);color:var(--muted);font-size:.85rem}
+.note{background:var(--mark-soft);border-radius:8px;padding:10px 14px;font-size:.95rem}
+.goal{color:var(--muted);font-size:.98rem}
+.unit{display:flex;flex-direction:column;gap:8px;border-inline-start:4px solid var(--accent);padding-inline-start:16px}
+.unit h3 small{font-family:var(--f-math);font-size:.8rem;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:99px;padding:2px 10px;margin-inline-end:8px;white-space:nowrap}
+ul.topics{margin:0;padding-inline-start:20px;display:flex;flex-direction:column;gap:6px}
+ul.topics li::marker{color:var(--accent)}
+.pages{font-size:.9rem;color:var(--mark);font-weight:600}
+.pages span{font-weight:400;color:var(--muted)}
+footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:6px}
+footer a{color:var(--accent)}
+@media (max-width:480px){h1{font-size:1.9rem} section.ch{padding:18px 16px 22px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<!-- KaTeX: renders LaTeX inside \( ... \) (same pinned version as the grade 11 site) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}],throwOnError:false})"></script>
+<style>.katex{font-size:1.08em}</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="back" href="index.html">← Back to main page</a>
+  <span class="eyebrow">Mathematics · Grade 10 · 5 study units · Reference</span>
+  <h1>Grade 10 Topics: What to Teach</h1>
+  <p class="lead">The full list of subjects for Grade 10 at the 5-unit level, based on the Israeli Ministry of Education syllabus. The six subject areas are split into 20 teaching units. Each unit lists its main ideas and the pages planned for this site.</p>
+</header>
+
+<nav aria-label="Contents">
+  <strong>Contents</strong>
+  <ol>
+    <li><a href="#overview">Overview and suggested order</a></li>
+    <li><a href="#analytic">Analytic geometry</a></li>
+    <li><a href="#functions">Introduction to functions</a></li>
+    <li><a href="#calculus">Differential calculus</a></li>
+    <li><a href="#trig-functions">Trigonometric functions</a></li>
+    <li><a href="#trig-plane">Trigonometry in the plane</a></li>
+    <li><a href="#geometry">Euclidean geometry</a></li>
+    <li><a href="#not-grade10">Not taught in Grade 10</a></li>
+  </ol>
+</nav>
+
+<!-- OVERVIEW: all 20 units in one table, in the suggested teaching order -->
+<section class="ch" id="overview">
+  <span class="num">00</span>
+  <h2>Overview and suggested order</h2>
+  <p>The order below is a suggestion. The analysis chain (units 3–14) must stay in order, because each unit builds on the one before it. Geometry and trigonometry can run in parallel with it, for example as a second weekly strand.</p>
+  <div class="tablebox">
+  <table>
+    <thead><tr><th>#</th><th>Teaching unit</th><th>Subject area</th></tr></thead>
+    <tbody>
+      <tr><td>01</td><td>The straight line and its equation</td><td>Analytic geometry</td></tr>
+      <tr><td>02</td><td>Systems of equations and the circle centred at the origin</td><td>Analytic geometry</td></tr>
+      <tr><td>03</td><td>Polynomial and power functions</td><td>Functions</td></tr>
+      <tr><td>04</td><td>Non-polynomial functions</td><td>Functions</td></tr>
+      <tr><td>05</td><td>Transformations and operations on functions</td><td>Functions</td></tr>
+      <tr><td>06</td><td>Composition and inverse functions</td><td>Functions</td></tr>
+      <tr><td>07</td><td>The concept of the derivative</td><td>Calculus</td></tr>
+      <tr><td>08</td><td>Rules of differentiation</td><td>Calculus</td></tr>
+      <tr><td>09</td><td>Investigating polynomial functions</td><td>Calculus</td></tr>
+      <tr><td>10</td><td>Tangent lines and antiderivatives of polynomials</td><td>Calculus</td></tr>
+      <tr><td>11</td><td>Rational functions</td><td>Calculus</td></tr>
+      <tr><td>12</td><td>Square root functions</td><td>Calculus</td></tr>
+      <tr><td>13</td><td>Optimization (max/min) problems</td><td>Calculus</td></tr>
+      <tr><td>14</td><td>The unit circle and the trigonometric functions</td><td>Trigonometry</td></tr>
+      <tr><td>15</td><td>Trigonometric equations</td><td>Trigonometry</td></tr>
+      <tr><td>16</td><td>Area formula, law of sines, law of cosines</td><td>Trigonometry</td></tr>
+      <tr><td>17</td><td>Deductive reasoning and proof skills</td><td>Geometry</td></tr>
+      <tr><td>18</td><td>Loci and special points of the triangle</td><td>Geometry</td></tr>
+      <tr><td>19</td><td>The circle</td><td>Geometry</td></tr>
+      <tr><td>20</td><td>Proportion and similar triangles</td><td>Geometry</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">The Ministry's July 2025 circular asks teachers to combine plane geometry, analytic geometry and trigonometry from the start of Grade 10, not to teach them as separate blocks. The units above can be mixed in that spirit.</p>
+</section>
+
+<!-- AREA 1: analytic geometry -->
+<section class="ch" id="analytic">
+  <span class="num">01</span>
+  <h2>Analytic geometry</h2>
+  <p class="goal">Goal: describe lines and circles with equations, and link them to the idea of a function.</p>
+  <div class="unit">
+    <h3><small>01</small>The straight line and its equation</h3>
+    <ul class="topics">
+      <li>Review of the line and the parabola, linked to the idea of a function.</li>
+      <li>Telling a function graph from a set of points that is not a graph, for example \(x=k\).</li>
+      <li>Finding the equation from two points, or from a slope and a point.</li>
+      <li>Parallel and perpendicular lines, intersection points, midpoint of a segment, distance between two points.</li>
+      <li>Explicit form \(y=mx+b\) compared with general form \(Ax+By+C=0\).</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>02</small>Systems of equations and the circle centred at the origin</h3>
+    <ul class="topics">
+      <li>Systems of linear equations and what they look like on a graph, including systems with parameters.</li>
+      <li>A system of one quadratic and one linear equation (a line meeting a parabola).</li>
+      <li>The circle \(x^2+y^2=R^2\), built from the distance formula. It prepares for trigonometry and is an example of a locus that is not a function.</li>
+      <li>Shifting the circle: \((x-a)^2+(y-b)^2=R^2\) as a transformation. The general form of the circle equation is not part of the syllabus.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+</section>
+
+<!-- AREA 2: introduction to functions -->
+<section class="ch" id="functions">
+  <span class="num">02</span>
+  <h2>Introduction to functions</h2>
+  <p class="goal">Goal: build a "feel for functions" that prepares students for calculus, both intuitively and formally.</p>
+  <div class="unit">
+    <h3><small>03</small>Polynomial and power functions</h3>
+    <ul class="topics">
+      <li>Review of linear and quadratic functions. Power functions \(f(x)=x^n\) as their generalization.</li>
+      <li>Even and odd powers. Roots of even and odd multiplicity and how they affect the graph.</li>
+      <li>A polynomial as a product of linear and quadratic factors: where it is positive or negative, behaviour at infinity, number of extreme points.</li>
+      <li>A first look at rate of change.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>04</small>Non-polynomial functions</h3>
+    <ul class="topics">
+      <li>Absolute value \(|x|\), square root \(\sqrt{x}\), \(\dfrac{1}{x}\) and \(\dfrac{1}{x^2}\).</li>
+      <li>Even and odd functions. Describing behaviour in terms of rate of change.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>05</small>Transformations and operations on functions</h3>
+    <ul class="topics">
+      <li>Reflection in the x-axis \((f\to -f)\) and in the y-axis \((f(x)\to f(-x))\).</li>
+      <li>Shifts and stretches: \(a(x-p)^n+k\), \(a\sqrt{x-p}+k\), \(\dfrac{a}{x-p}+k\).</li>
+      <li>Sum, difference, product and quotient of functions.</li>
+      <li>The function \(g=\dfrac{1}{f}\): domain, zeros, asymptotes and how its graph relates to the graph of \(f\).</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>06</small>Composition and inverse functions</h3>
+    <ul class="topics">
+      <li>Composition: the absolute value, square and square root of a function.</li>
+      <li>Inverse function: when it exists, and symmetry about the line \(y=x\).</li>
+      <li>\(\sqrt{x}\) as the inverse of \(x^2\) (notation \(x^{1/2}\)), the cube root as the inverse of \(x^3\), and the fact that \(\sqrt{x^2}=|x|\).</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+</section>
+
+<!-- AREA 3: differential calculus (the largest area of Grade 10) -->
+<section class="ch" id="calculus">
+  <span class="num">03</span>
+  <h2>Differential calculus</h2>
+  <p class="goal">Goal: understand the derivative as a rate of change and use it to investigate functions and solve problems. This is the largest area of the year.</p>
+  <div class="unit">
+    <h3><small>07</small>The concept of the derivative</h3>
+    <ul class="topics">
+      <li>Constant and changing rates of change in real situations (fuel, speed, temperature).</li>
+      <li>"Steps" as a picture of rate of change: \(\dfrac{\Delta y}{\Delta x}\), and making the step narrower.</li>
+      <li>The tangent line as a linear approximation ("zoom in"); its slope is the value of the derivative.</li>
+      <li>Definition: \(f'(x_0)=\lim\limits_{\Delta x\to 0}\dfrac{f(x_0+\Delta x)-f(x_0)}{\Delta x}\), with limits computed intuitively and numerically.</li>
+      <li>A tangent can exist where the derivative does not, e.g. \(\sqrt{x}\) at \(x=0\).</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>08</small>Rules of differentiation</h3>
+    <ul class="topics">
+      <li>\((af)'=af'\), \((f\pm g)'=f'\pm g'\), the product rule \((fg)'\) and the chain rule \((f(g))'=f'(g)\cdot g'\), proved from the definition.</li>
+      <li>How the graph of a function relates to the graph of its derivative.</li>
+      <li>The quotient rule is taught later, with rational functions (unit 11).</li>
+    </ul>
+    <p class="pages">Planned pages: <span>rules page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>09</small>Investigating polynomial functions</h3>
+    <ul class="topics">
+      <li>Full investigation: domain, intercepts, extreme points, intervals of increase and decrease, even/odd, sketch.</li>
+      <li>Investigation on a closed interval (maximum and minimum at the endpoints).</li>
+      <li>Qualitative study of how many solutions an equation or inequality has.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>10</small>Tangent lines and antiderivatives of polynomials</h3>
+    <ul class="topics">
+      <li>The equation of a tangent at a point on the graph, and tangents with a given slope.</li>
+      <li>Antiderivative of a polynomial (without the integral sign): finding \(f\) from \(f'\), and asking whether it is unique.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>11</small>Rational functions</h3>
+    <ul class="topics">
+      <li>The derivative of \(\dfrac{1}{x}\); investigating \(\dfrac{1}{f}\) as a composite function.</li>
+      <li>Points where the function is undefined: vertical asymptote or removable discontinuity ("hole" in the graph).</li>
+      <li>Behaviour as \(x\to\pm\infty\) and horizontal asymptotes (intuitive limits, no heavy algebra).</li>
+      <li>The quotient rule.</li>
+      <li>Sketch from the domain, asymptotes, intercepts and signs of numerator and denominator, then full investigation with the derivative.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>12</small>Square root functions</h3>
+    <ul class="topics">
+      <li>The derivative of \(\sqrt{x}\), and \(\sqrt{x}\) as the reflection of \(x^2\) in \(y=x\).</li>
+      <li>How the derivatives of inverse functions are related.</li>
+      <li>Simple composite roots: a linear expression under the root, e.g. \(\sqrt{2x+3}\) (optionally a quadratic).</li>
+      <li>Investigation with the derivative, tangent lines. Harder root functions continue in Grade 11.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>13</small>Optimization (max/min) problems</h3>
+    <ul class="topics">
+      <li>Problems on open and closed intervals.</li>
+      <li>Settings: plane and solid geometry, analytic geometry, functions, trigonometry, physics and economics.</li>
+      <li>Focus on what the extreme value means, not only on the calculation. Some problems solved without a derivative.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+</section>
+
+<!-- AREA 4: trigonometric functions -->
+<section class="ch" id="trig-functions">
+  <span class="num">04</span>
+  <h2>Trigonometric functions</h2>
+  <p class="goal">Goal: define sine, cosine and tangent on the unit circle and use them to model periodic behaviour. The teacher may teach this area before or after trigonometry in the plane.</p>
+  <div class="unit">
+    <h3><small>14</small>The unit circle and the trigonometric functions</h3>
+    <ul class="topics">
+      <li>Matching a real number to a point on the unit circle by arc length (circumference \(2\pi\)); radians.</li>
+      <li>\(\sin x\) and \(\cos x\) as the y- and x-coordinates of the point; \(\tan x\) through the tangent line at \((1,0)\).</li>
+      <li>Periodicity and symmetry, derived from the definitions. Graphs, shifts and stretches.</li>
+      <li>Identities: \(\sin^2x+\cos^2x=1\), \(\sin\!\left(\tfrac{\pi}{2}-x\right)=\cos x\), \(\tan x=\dfrac{\sin x}{\cos x}\).</li>
+      <li>Special values at \(\tfrac{\pi}{6}\), \(\tfrac{\pi}{4}\), \(\tfrac{\pi}{3}\), \(\tfrac{\pi}{2}\). Link to ratios in a right triangle.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>15</small>Trigonometric equations</h3>
+    <ul class="topics">
+      <li>Equations of the form \(a\sin(x+b)+c=0\), and the same for cosine and tangent.</li>
+      <li>General solution, and solutions within a given interval.</li>
+      <li>Modelling periodic phenomena (tides, daylight hours, a Ferris wheel).</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+</section>
+
+<!-- AREA 5: trigonometry in the plane -->
+<section class="ch" id="trig-plane">
+  <span class="num">05</span>
+  <h2>Trigonometry in the plane</h2>
+  <p class="goal">Goal: calculate sides, angles and areas in any triangle and use trigonometry in proofs.</p>
+  <div class="unit">
+    <h3><small>16</small>Area formula, law of sines, law of cosines</h3>
+    <ul class="topics">
+      <li>Triangle area \(S=\tfrac12 ab\sin C\), proved for acute and obtuse triangles.</li>
+      <li>Law of sines: \(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}=2R\).</li>
+      <li>Law of cosines: \(c^2=a^2+b^2-2ab\cos C\).</li>
+      <li>Calculations and proofs in triangles and quadrilaterals; checking units and dimensions.</li>
+      <li>The difference between an identity and an equation, and between an approximate calculation and a general proof.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+</section>
+
+<!-- AREA 6: Euclidean geometry (taught in Grade 10 only) -->
+<section class="ch" id="geometry">
+  <span class="num">06</span>
+  <h2>Euclidean geometry</h2>
+  <p class="goal">Goal: reason deductively and write correct proofs. Euclidean geometry is taught in Grade 10 only; in Grade 11 geometry continues through trigonometry.</p>
+  <div class="unit">
+    <h3><small>17</small>Deductive reasoning and proof skills</h3>
+    <ul class="topics">
+      <li>Quantifiers: "for every" and "there exists". Counterexamples.</li>
+      <li>Necessary and sufficient conditions; a theorem and its converse.</li>
+      <li>Proof by contradiction.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>18</small>Loci and special points of the triangle</h3>
+    <ul class="topics">
+      <li>Loci: circle, perpendicular bisector, angle bisector, parallel lines, with proof in both directions.</li>
+      <li>Perpendicular bisectors meet at the circumcentre; angle bisectors meet at the incentre.</li>
+      <li>Medians meet at the centroid and divide each other in the ratio \(2:1\); the altitudes meet at one point.</li>
+      <li>The fourth congruence theorem (SSA with the angle opposite the longer side) and the case with no congruence.</li>
+      <li>The converse of Pythagoras' theorem.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>19</small>The circle</h3>
+    <ul class="topics">
+      <li>Definitions: radius, chord, diameter, arc, central angle, inscribed angle.</li>
+      <li>Theorems on arcs, chords and angles. An inscribed angle is half the central angle on the same arc; an angle on a diameter is a right angle.</li>
+      <li>Cyclic quadrilateral (opposite angles sum to \(180^\circ\)) and its converse.</li>
+      <li>Tangents: perpendicular to the radius; two tangents from a point are equal; the tangent–chord angle equals the inscribed angle on the arc.</li>
+      <li>Constructions: finding the centre of a given circle, drawing a tangent from a point on or outside the circle.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+  <div class="unit">
+    <h3><small>20</small>Proportion and similar triangles</h3>
+    <ul class="topics">
+      <li>Thales' (intercept) theorem, its converse and the theorems that follow (midsegment).</li>
+      <li>Similarity theorems (AA, SAS, SSS). Identifying similar triangles and proving similarity.</li>
+      <li>In similar triangles: ratio of perimeters, medians, angle bisectors, altitudes and radii; areas in the ratio \(k^2\).</li>
+      <li>The internal angle bisector theorem.</li>
+      <li>Similarity in the circle: intersecting chords, tangent and secant, two secants from one point.</li>
+      <li>Constructions: dividing a segment into \(n\) equal parts and in a given ratio.</li>
+    </ul>
+    <p class="pages">Planned pages: <span>explanation page · exercises page</span></p>
+  </div>
+</section>
+
+<!-- What belongs to Grade 11, so it is not taught here -->
+<section class="ch" id="not-grade10">
+  <span class="num">07</span>
+  <h2>Not taught in Grade 10</h2>
+  <p>These topics come in Grade 11 and are not part of this site's Grade 10 plan:</p>
+  <ul class="topics">
+    <li>Sequences (arithmetic, geometric, recursive) and mathematical induction.</li>
+    <li>Integral calculus.</li>
+    <li>The second derivative, concavity and points of inflection.</li>
+    <li>Trigonometric identities for sums and double angles, and derivatives of trigonometric functions.</li>
+    <li>Probability.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Source: the Ministry of Education's detailed syllabus for 5-unit mathematics, Grades 10–11 (as summarised on the Grade 11 site), and the Ministry's July 2025 circular to mathematics teachers. The Grade 10 summer work (polynomials, rational functions, composite functions and geometry without the circle) matches this list.</p>
+  <p>Which topics appear in which exam, and in which year, can change. Check the current Ministry publications before planning tests. <a href="https://meyda.education.gov.il/files/Pop/0files/matmatika/Chativa-Elyona/tashpav/mafmar-tashpav.pdf" target="_blank" rel="noopener">July 2025 circular (Hebrew, PDF)</a></p>
+</footer>
+</div>
+</body>
+</html>

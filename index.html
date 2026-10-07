@@ -59,6 +59,10 @@ nav.toc a:hover,nav.toc a:focus-visible{border-color:var(--accent);background:va
 footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:16px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important} html{scroll-behavior:auto}}
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
 </head>
 <body>
 <div class="wrap">
@@ -77,16 +81,87 @@ footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);paddi
 </nav>
 
 <div class="about">
-  <div><h3>How each page works</h3><p>Explanation and formulas first, then questions at three levels: basic, practice and exam level.</p></div>
+  <div><h3>Two pages per unit</h3><p>Each unit has an explanation page (ideas, formulas, worked examples and short "check yourself" exercises) and a workbook with 30 questions in three levels: basic, practice and exam level.</p></div>
   <div><h3>How to practise</h3><p>Solutions are hidden. Solve on your own first, then click "Show solution" to check your method and answer.</p></div>
-  <div><h3>Suggested order</h3><p>Within each topic, study the pages in numbered order, because each page builds on the ones before it.</p></div>
+  <div><h3>Suggested order</h3><p>Read the explanation first, then work through the workbook. Units are numbered in the suggested teaching order; within each subject area each unit builds on the ones before it.</p></div>
 </div>
 
 <!-- TOPIC: curriculum reference. Listed first on purpose. New documents: add an <li> inside the matching ul.docs, or a new section.topic for a new subject -->
 <section class="topic" id="curriculum">
-  <div class="topic-head"><h2>Curriculum</h2><span>1 reference document</span></div>
+  <div class="topic-head"><h2>Curriculum</h2><span>2 reference documents</span></div>
   <ul class="docs">
     <li><a href="curriculum-grade10-5units.html"><span class="no">00</span><span class="t">Grade 10 Topics: What to Teach</span><span class="q">Reference</span><span class="d">The full list of Grade 10 subjects at the 5-unit level, based on the Ministry of Education syllabus: six subject areas (analytic geometry, introduction to functions, differential calculus, trigonometric functions, trigonometry in the plane, Euclidean geometry) split into 20 teaching units, with the main ideas of each unit, a suggested teaching order and the topics left for Grade 11.</span></a></li>
+    <li><a href="project-purpose.html"><span class="no">--</span><span class="t">Project Purpose</span><span class="q">About</span><span class="d">What this site is for and the rules for building it, from the project instructions: HTML pages in English for teaching Grade 10 mathematics in Israel at the 4-unit level, all saved in one folder and listed on this main page. Includes a note that the existing units follow the 5-unit syllabus.</span></a></li>
+  </ul>
+</section>
+
+<section class="topic" id="analytic">
+  <div class="topic-head"><h2>Analytic geometry</h2><span>2 units · 4 pages · 76 questions</span></div>
+  <ul class="docs">
+    <li><a href="01-straight-line-explanation.html"><span class="no">01</span><span class="t">The Straight Line and Its Equation</span><span class="q">Explanation · 8 exercises</span><span class="d">Slope, the equation of a line, parallel and perpendicular lines, midpoint, distance and the intersection of two lines.</span></a></li>
+    <li><a href="01-straight-line-workbook.html"><span class="no">01</span><span class="t">Workbook: The Straight Line and Its Equation</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="02-systems-and-circle-explanation.html"><span class="no">02</span><span class="t">Systems of Equations and the Circle</span><span class="q">Explanation · 8 exercises</span><span class="d">Linear systems and their graphs, systems with a parameter, a line meeting a parabola, the circle centred at the origin and the shifted circle.</span></a></li>
+    <li><a href="02-systems-and-circle-workbook.html"><span class="no">02</span><span class="t">Workbook: Systems of Equations and the Circle</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+  </ul>
+</section>
+
+<section class="topic" id="functions">
+  <div class="topic-head"><h2>Introduction to functions</h2><span>4 units · 8 pages · 152 questions</span></div>
+  <ul class="docs">
+    <li><a href="03-polynomial-functions-explanation.html"><span class="no">03</span><span class="t">Polynomial and Power Functions</span><span class="q">Explanation · 8 exercises</span><span class="d">Linear and quadratic functions revisited, power functions, roots and their multiplicity, sign tables, behaviour at infinity and a first look at rate of change.</span></a></li>
+    <li><a href="03-polynomial-functions-workbook.html"><span class="no">03</span><span class="t">Workbook: Polynomial and Power Functions</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="04-non-polynomial-functions-explanation.html"><span class="no">04</span><span class="t">Non-Polynomial Functions</span><span class="q">Explanation · 8 exercises</span><span class="d">The absolute value function, the square root function, \(\tfrac1x\) and \(\tfrac1{x^2}\): their domains, graphs, symmetry, asymptotes and how fast they change.</span></a></li>
+    <li><a href="04-non-polynomial-functions-workbook.html"><span class="no">04</span><span class="t">Workbook: Non-Polynomial Functions</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="05-transformations-explanation.html"><span class="no">05</span><span class="t">Transformations and Operations on Functions</span><span class="q">Explanation · 8 exercises</span><span class="d">Shifts, stretches and reflections of graphs, the families \(a(x-p)^n+k\), \(a\sqrt{x-p}+k\) and \(\tfrac{a}{x-p}+k\), and new functions built by adding, multiplying and dividing.</span></a></li>
+    <li><a href="05-transformations-workbook.html"><span class="no">05</span><span class="t">Workbook: Transformations and Operations on Functions</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="06-composition-and-inverse-explanation.html"><span class="no">06</span><span class="t">Composition and Inverse Functions</span><span class="q">Explanation · 8 exercises</span><span class="d">Putting one function inside another, the functions \(|f|\), \(f^2\) and \(\sqrt f\), inverse functions and their graphs, the square root and cube root as inverses, and why \(\sqrt{x^2}=|x|\).</span></a></li>
+    <li><a href="06-composition-and-inverse-workbook.html"><span class="no">06</span><span class="t">Workbook: Composition and Inverse Functions</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+  </ul>
+</section>
+
+<section class="topic" id="calculus">
+  <div class="topic-head"><h2>Differential calculus</h2><span>7 units · 14 pages · 266 questions</span></div>
+  <ul class="docs">
+    <li><a href="07-derivative-concept-explanation.html"><span class="no">07</span><span class="t">The Concept of the Derivative</span><span class="q">Explanation · 8 exercises</span><span class="d">Rate of change, the slope of a secant, zooming in to the tangent, the definition of the derivative as a limit, and points where the derivative does not exist.</span></a></li>
+    <li><a href="07-derivative-concept-workbook.html"><span class="no">07</span><span class="t">Workbook: The Concept of the Derivative</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="08-differentiation-rules-explanation.html"><span class="no">08</span><span class="t">Rules of Differentiation</span><span class="q">Explanation · 8 exercises</span><span class="d">The power rule, constant multiples and sums, the product rule and the chain rule, with proofs from the definition, and how the graph of \(f\) relates to the graph of \(f'\).</span></a></li>
+    <li><a href="08-differentiation-rules-workbook.html"><span class="no">08</span><span class="t">Workbook: Rules of Differentiation</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="09-investigating-polynomials-explanation.html"><span class="no">09</span><span class="t">Investigating Polynomial Functions</span><span class="q">Explanation · 8 exercises</span><span class="d">A full investigation with the derivative: intervals of increase and decrease, maximum and minimum points, sketching, extreme values on a closed interval and counting the solutions of an equation.</span></a></li>
+    <li><a href="09-investigating-polynomials-workbook.html"><span class="no">09</span><span class="t">Workbook: Investigating Polynomial Functions</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="10-tangents-and-antiderivatives-explanation.html"><span class="no">10</span><span class="t">Tangent Lines and Antiderivatives of Polynomials</span><span class="q">Explanation · 8 exercises</span><span class="d">The equation of a tangent, tangents with a given slope or through a given point, and going backwards: finding a function from its derivative.</span></a></li>
+    <li><a href="10-tangents-and-antiderivatives-workbook.html"><span class="no">10</span><span class="t">Workbook: Tangent Lines and Antiderivatives of Polynomials</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="11-rational-functions-explanation.html"><span class="no">11</span><span class="t">Rational Functions</span><span class="q">Explanation · 8 exercises</span><span class="d">The derivative of \(\tfrac1x\), the quotient rule, vertical asymptotes and holes, horizontal asymptotes, sketching from signs, and full investigation with the derivative.</span></a></li>
+    <li><a href="11-rational-functions-workbook.html"><span class="no">11</span><span class="t">Workbook: Rational Functions</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="12-square-root-functions-explanation.html"><span class="no">12</span><span class="t">Square Root Functions</span><span class="q">Explanation · 8 exercises</span><span class="d">The derivative of \(\sqrt x\), the link between the derivatives of a function and its inverse, roots of a linear expression, investigation, tangents and equations with roots.</span></a></li>
+    <li><a href="12-square-root-functions-workbook.html"><span class="no">12</span><span class="t">Workbook: Square Root Functions</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="13-optimization-explanation.html"><span class="no">13</span><span class="t">Optimization: Maximum and Minimum Problems</span><span class="q">Explanation · 8 exercises</span><span class="d">Word problems where something must be as large or as small as possible: a method in six steps, problems from geometry, analytic geometry, motion and economics, and when the answer is at the end of the interval.</span></a></li>
+    <li><a href="13-optimization-workbook.html"><span class="no">13</span><span class="t">Workbook: Optimization: Maximum and Minimum Problems</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+  </ul>
+</section>
+
+<section class="topic" id="trig">
+  <div class="topic-head"><h2>Trigonometry</h2><span>3 units · 6 pages · 114 questions</span></div>
+  <ul class="docs">
+    <li><a href="14-trigonometric-functions-explanation.html"><span class="no">14</span><span class="t">The Unit Circle and the Trigonometric Functions</span><span class="q">Explanation · 8 exercises</span><span class="d">Radians, sine and cosine as coordinates on the unit circle, the tangent, signs and symmetry, the basic identities, special values, and the graphs with their shifts and stretches.</span></a></li>
+    <li><a href="14-trigonometric-functions-workbook.html"><span class="no">14</span><span class="t">Workbook: The Unit Circle and the Trigonometric Functions</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="15-trigonometric-equations-explanation.html"><span class="no">15</span><span class="t">Trigonometric Equations</span><span class="q">Explanation · 8 exercises</span><span class="d">Solving \(\sin x=a\), \(\cos x=a\) and \(\tan x=a\), the general solution and solutions in an interval, equations of the form \(a\sin(bx+c)+d=0\), and equations from real-life models.</span></a></li>
+    <li><a href="15-trigonometric-equations-workbook.html"><span class="no">15</span><span class="t">Workbook: Trigonometric Equations</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="16-sine-and-cosine-laws-explanation.html"><span class="no">16</span><span class="t">Area Formula, Law of Sines, Law of Cosines</span><span class="q">Explanation · 8 exercises</span><span class="d">Three tools for any triangle, not only right triangles: the area formula \(\tfrac12ab\sin C\), the law of sines with the circumscribed circle, and the law of cosines. How to choose the right tool, and how to use them in proofs.</span></a></li>
+    <li><a href="16-sine-and-cosine-laws-workbook.html"><span class="no">16</span><span class="t">Workbook: Area Formula, Law of Sines, Law of Cosines</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+  </ul>
+</section>
+
+<section class="topic" id="geometry">
+  <div class="topic-head"><h2>Euclidean geometry</h2><span>4 units · 8 pages · 152 questions</span></div>
+  <ul class="docs">
+    <li><a href="17-deductive-reasoning-explanation.html"><span class="no">17</span><span class="t">Deductive Reasoning and Proof Skills</span><span class="q">Explanation · 8 exercises</span><span class="d">How mathematical statements are built and proved: "if… then", the quantifiers "for every" and "there exists", counterexamples, a theorem and its converse, necessary and sufficient conditions, and proof by contradiction.</span></a></li>
+    <li><a href="17-deductive-reasoning-workbook.html"><span class="no">17</span><span class="t">Workbook: Deductive Reasoning and Proof Skills</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="18-loci-and-triangle-centers-explanation.html"><span class="no">18</span><span class="t">Loci and Special Points of the Triangle</span><span class="q">Explanation · 8 exercises</span><span class="d">What a locus is and how to prove one, the basic loci, the four special points of a triangle (circumcentre, incentre, centroid, orthocentre), the fourth congruence theorem and the converse of Pythagoras' theorem.</span></a></li>
+    <li><a href="18-loci-and-triangle-centers-workbook.html"><span class="no">18</span><span class="t">Workbook: Loci and Special Points of the Triangle</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="19-the-circle-explanation.html"><span class="no">19</span><span class="t">The Circle</span><span class="q">Explanation · 8 exercises</span><span class="d">Chords, arcs and central angles, the inscribed angle theorem, the angle on a diameter, cyclic quadrilaterals, tangents, the angle between a tangent and a chord, angles between chords and secants, and constructions.</span></a></li>
+    <li><a href="19-the-circle-workbook.html"><span class="no">19</span><span class="t">Workbook: The Circle</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
+    <li><a href="20-proportion-and-similarity-explanation.html"><span class="no">20</span><span class="t">Proportion and Similar Triangles</span><span class="q">Explanation · 8 exercises</span><span class="d">Properties of proportions, Thales' theorem and its converse, the midsegment, the similarity theorems, ratios of perimeters and areas, the angle bisector theorem, similarity in the right triangle and in the circle, and dividing a segment.</span></a></li>
+    <li><a href="20-proportion-and-similarity-workbook.html"><span class="no">20</span><span class="t">Workbook: Proportion and Similar Triangles</span><span class="q">30 questions</span><span class="d">Learn by doing: 30 questions in three levels (basic, practice, exam level), each with a full worked solution, and a tick box to track what you have solved.</span></a></li>
   </ul>
 </section>
 

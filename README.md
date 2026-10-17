@@ -26,6 +26,7 @@ Open `index.html` in any browser. No build step, server or installation is neede
 | Area | Files | Description |
 |---|---|---|
 | Reference | `curriculum-grade10-5units.html` | The Grade 10 (5-unit) topic list: 6 subject areas in 20 teaching units, with links to every page |
+| | `glossary.html` | Glossary: every term used on the site (122), A–Z, with Hebrew names, definitions, formulas and links to the units; searchable in English or Hebrew |
 | Analytic geometry | `01-straight-line-*`, `02-systems-and-circle-*` | The straight line; systems of equations and the circle |
 | Introduction to functions | `03-polynomial-functions-*` … `06-composition-and-inverse-*` | Polynomials, non-polynomial functions, transformations, composition and inverse |
 | Differential calculus | `07-derivative-concept-*` … `13-optimization-*` | The derivative, rules, investigating polynomials, tangents and antiderivatives, rational and root functions, optimization |
@@ -36,7 +37,7 @@ Each unit `NN-<name>` has two files: `NN-<name>-explanation.html` and `NN-<name>
 
 ## Structure of a page
 
-**Explanation page:** links to the main page and the workbook, contents, numbered sections with explanations, formulas, graphs and worked examples, a "Common mistakes" section, and 8 "Check yourself" exercises.
+**Explanation page:** links to the main page, the glossary and the workbook, contents, numbered sections with explanations, formulas, graphs and worked examples, a "Common mistakes" section, and 8 "Check yourself" exercises.
 
 **Workbook:** three levels, Level A (basic), Level B (practice) and Level C (exam level), 10 questions each. Every solution is hidden in a `<details>` element ("Show solution"). A toolbar shows or hides all solutions, and an "I solved it" tick box per question keeps a progress count in the browser. When a page is printed, all solutions are shown.
 
@@ -46,6 +47,7 @@ Each unit `NN-<name>` has two files: `NN-<name>-explanation.html` and `NN-<name>
 math10gradeenglish/
 ├── index.html                        home page: list of all documents
 ├── curriculum-grade10-5units.html    topic list (5-unit syllabus)
+├── glossary.html                     all terms, A–Z, with Hebrew names and links to units
 ├── NN-<name>-explanation.html        explanation page of unit NN (01–20)
 ├── NN-<name>-workbook.html           workbook of unit NN
 ├── assets/
@@ -60,6 +62,7 @@ math10gradeenglish/
 2. Copy the `<head>` of an existing page: it links `assets/site.css`, `assets/site.js` and KaTeX.
 3. Write math in LaTeX inside `\( … \)` (inline) or `\[ … \]` (display). Inside formulas write `\lt` and `\gt` instead of `<` and `>`.
 4. Add the page to `index.html`, with a short description, in the section of its subject area.
+5. Add every new term the page introduces to the glossary (`glossary.html`), with its Hebrew name, a definition and a link to the page.
 
 ## Note
 

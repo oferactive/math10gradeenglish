@@ -111,3 +111,11 @@ p:has(.mfrac),li:has(> .mfrac){line-height:2.3}
 .example>*,.steps>*,.meaning>*,section.ch>*{min-width:0;max-width:100%}
 .big,.f{overflow-x:auto}
 html,body{overflow-x:clip}
+
+/* parts of a detailed solution */
+.sol .s-idea{color:var(--ink)}
+.sol .s-idea strong{color:var(--accent)}
+.sol .s-ans{background:var(--paper);border-inline-start:3px solid var(--accent);border-radius:0 6px 6px 0;padding:4px 10px;margin-top:4px}
+.sol .s-ans strong{color:var(--accent)}
+.sol .s-chk strong{color:var(--ok)}
+.sol .s-warn strong{color:var(--mark)}
